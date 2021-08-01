@@ -17,8 +17,7 @@ export class HomeComponent implements OnInit {
   }
 
   async loadUserProfile(){
-    const userProfile = await this.keycloakService.loadUserProfile(true);
-    console.log(userProfile);
+    this.keycloakService.getKeycloakInstance().accountManagement();
   }
 
   async logout(){
